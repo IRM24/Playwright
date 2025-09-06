@@ -1,0 +1,99 @@
+[
+  {
+    "success": false,
+    "originalLocator": "//input[@id='WRONG-PASSWORD-ID']",
+    "attempts": [],
+    "pageUrl": "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+    "timestamp": "2025-09-06T18:35:54.337Z"
+  },
+  {
+    "success": true,
+    "workingLocator": "#input-password",
+    "originalLocator": "//input[@id='WRONG-PASSWORD-ID']",
+    "attempts": [
+      "#input-password"
+    ],
+    "pageUrl": "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+    "timestamp": "2025-09-06T18:44:36.382Z"
+  },
+  {
+    "success": true,
+    "workingLocator": "#input-email",
+    "originalLocator": "//input[@id='input-EMAIL']",
+    "attempts": [
+      "#input-email"
+    ],
+    "pageUrl": "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+    "timestamp": "2025-09-06T18:47:54.892Z"
+  },
+  {
+    "success": true,
+    "workingLocator": "#input-password",
+    "originalLocator": "//input[@id='WRONG-PASSWORD-ID']",
+    "attempts": [
+      "#input-password"
+    ],
+    "pageUrl": "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+    "timestamp": "2025-09-06T18:48:04.206Z"
+  },
+  {
+    "success": true,
+    "workingLocator": "#input-email",
+    "originalLocator": "//div[@class='form-group-wrong']//div[@class='col-lg-8']//input[@name='email-field'][@placeholder='Enter your email here']",
+    "attempts": [
+      "#input-email"
+    ],
+    "pageUrl": "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+    "timestamp": "2025-09-06T18:56:14.911Z"
+  },
+  {
+    "success": true,
+    "workingLocator": "#input-password",
+    "originalLocator": "//input[@id='WRONG-PASSWORD-ID']",
+    "attempts": [
+      "#input-password"
+    ],
+    "pageUrl": "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+    "timestamp": "2025-09-06T18:56:22.916Z"
+  },
+  {
+    "success": true,
+    "workingLocator": "a[href=\"https://ecommerce-playground.lambdatest.io/index.php?route=account/register\"]",
+    "originalLocator": "//a[contains(text(), 'Register')]",
+    "attempts": [
+      "a[href=\"https://ecommerce-playground.lambdatest.io/index.php?route=account/register\"]"
+    ],
+    "pageUrl": "https://ecommerce-playground.lambdatest.io/",
+    "timestamp": "2025-09-06T19:19:18.804Z"
+  },
+  {
+    "success": true,
+    "workingLocator": "#input-email",
+    "originalLocator": "//input[@id='input-email-WRONG']",
+    "attempts": [
+      "#input-email"
+    ],
+    "pageUrl": "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+    "timestamp": "2025-09-06T19:21:04.559Z"
+  },
+  {
+    "success": true,
+    "workingLocator": "#input-password",
+    "originalLocator": "//input[@id='input-password-WRONG']",
+    "attempts": [
+      "#input-password"
+    ],
+    "pageUrl": "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+    "timestamp": "2025-09-06T19:21:11.822Z"
+  },
+  {
+    "success": true,
+    "workingLocator": "input[type='submit'][value='Login']",
+    "originalLocator": "//input[@value='Login-WRONG']",
+    "attempts": [
+      "input[type='submit'][value='Login']"
+    ],
+    "pageUrl": "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+    "timestamp": "2025-09-06T19:21:18.887Z"
+  }
+]

@@ -1,17 +1,36 @@
 import { PlaywrightTestConfig } from '@playwright/test';
+import * as dotenv from 'dotenv';
+
+// Cargar variables de entorno ANTES de cualquier otra cosa
+dotenv.config();
+
 const config: PlaywrightTestConfig = {
-  //testMatch: ['interactions.test.ts'],
-  use: {headless: false,
-    screenshot: 'only-on-failure', // Take screenshots only on test failure
-    video: "on", // Record videos only on test failure
+  testDir: './tests',
+  timeout: 60000,
+  retries: 2,
+  globalSetup: require.resolve('./ai-healing/globalSetup.ts'),
+  use: {
+    headless: false,
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
     launchOptions: {
-      slowMo: 1000, // Slow down operations by 1000ms for better visibility
-    }
+      slowMo: 500,
+    },
   },
-  reporter: [['json', {
-    outputFile: 'jsonTests/test-results.json', // Output file for JSON reporter
-  }],['dot'], ['html', {
-    outputFile: 'playwright-report/test-results.html', // Output file for HTML reporter
-  }]], // Use HTML reporter for better visibility
-}
+  reporter: [
+    ['dot'],
+    ['json', { outputFile: 'jsonTests/test-results.json' }],
+    ['html', { outputFile: 'playwright-report/test-results.html' }]
+  ],
+  projects: [
+    {
+      name: 'chromium',
+      use: { 
+        ...require('@playwright/test').devices['Desktop Chrome'],
+        headless: false,
+      },
+    },
+  ],
+};
+
 export default config;

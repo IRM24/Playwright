@@ -1,15 +1,25 @@
 {
-  "name": "internship",
+  "name": "playwright-ai-healing",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@playwright/test": "^1.53.2",
     "@types/node": "^24.0.11",
-    "moment": "^2.29.1"
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.2",
+    "fs-extra": "^11.3.1"
   }
 }
+
+
+
+
+
