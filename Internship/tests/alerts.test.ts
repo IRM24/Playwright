@@ -1,5 +1,6 @@
 import {test, expect} from '@playwright/test';
 
+
 test('Alerts test', async ({ page }) => {
     await page.goto("https://www.lambdatest.com/selenium-playground/javascript-alert-box-demo");
     
