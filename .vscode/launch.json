@@ -1,0 +1,40 @@
+@@ .. @@
+ {
+     // Use IntelliSense para saber los atributos posibles.
+     // Mantenga el puntero para ver las descripciones de los existentes atributos.
+     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+     "version": "0.2.0",
+     "configurations": [
+         {
+             "type": "chrome",
+             "request": "launch",
+             "name": "Iniciar Chrome para localhost",
+             "url": "http://localhost:8080",
+             "webRoot": "${workspaceFolder}"
++        },
++        {
++            "name": "Debug MCP Tests",
++            "type": "node",
++            "request": "launch",
++            "program": "${workspaceFolder}/node_modules/.bin/playwright",
++            "args": ["test", "tests/mcp-*.test.ts", "--debug"],
++            "console": "integratedTerminal",
++            "env": {
++                "PLAYWRIGHT_HEADLESS": "false",
++                "GEMINI_API_KEY": "${env:GEMINI_API_KEY}"
++            }
++        },
++        {
++            "name": "Debug MCP Runner",
++            "type": "node",
++            "request": "launch",
++            "program": "${workspaceFolder}/scripts/run-mcp-tests.ts",
++            "console": "integratedTerminal",
++            "runtimeArgs": ["-r", "ts-node/register"],
++            "env": {
++                "PLAYWRIGHT_HEADLESS": "false",
++                "GEMINI_API_KEY": "${env:GEMINI_API_KEY}"
++            }
+         }
+     ]
+ }

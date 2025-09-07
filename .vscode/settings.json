@@ -1,0 +1,16 @@
+{
+  "mcp.servers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcptest"],
+      "env": {
+        "PLAYWRIGHT_HEADLESS": "false",
+        "PLAYWRIGHT_TIMEOUT": "30000"
+      }
+    }
+  },
+  "mcp.enableLogging": true,
+  "mcp.logLevel": "debug",
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": true
+}

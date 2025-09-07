@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MCP: Start Playwright Server",
+      "type": "shell",
+      "command": "npx",
+      "args": ["@playwright/mcptest"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "MCP: Run Basic Tests",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:mcp-basic"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "new"
+      },
+      "dependsOn": "MCP: Start Playwright Server"
+    },
+    {
+      "label": "MCP: Run AI Integration Tests",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:mcp-ai"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "new"
+      },
+      "dependsOn": "MCP: Start Playwright Server"
+    }
+  ]
+}
