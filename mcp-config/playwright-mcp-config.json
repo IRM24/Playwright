@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["playwright-mcp"],
+      "env": {
+        "PLAYWRIGHT_HEADLESS": "false",
+        "PLAYWRIGHT_TIMEOUT": "30000"
+      }
+    }
+  },
+  "tools": {
+    "playwright_navigate": {
+      "description": "Navigate to a URL",
+      "enabled": true
+    },
+    "playwright_click": {
+      "description": "Click on an element",
+      "enabled": true
+    },
+    "playwright_fill": {
+      "description": "Fill an input field",
+      "enabled": true
+    },
+    "playwright_screenshot": {
+      "description": "Take a screenshot",
+      "enabled": true
+    },
+    "playwright_get_text": {
+      "description": "Get text content from an element",
+      "enabled": true
+    }
+  }
+}

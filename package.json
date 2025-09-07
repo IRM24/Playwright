@@ -1,0 +1,11 @@
+@@ .. @@
+   "scripts": {
+-    "test": "playwright test"
++    "test": "playwright test",
++    "test:mcp": "playwright test tests/mcp-*.test.ts",
++    "test:mcp-basic": "playwright test tests/mcp-basic.test.ts",
++    "test:mcp-ai": "playwright test tests/mcp-ai-integration.test.ts",
++    "test:mcp-performance": "playwright test tests/mcp-performance.test.ts",
++    "mcp:runner": "ts-node scripts/run-mcp-tests.ts",
++    "mcp:setup": "npm install playwright-mcp @modelcontextprotocol/sdk && mkdir -p test-results"
+   },
